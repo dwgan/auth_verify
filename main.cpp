@@ -13,7 +13,7 @@ typedef struct {
 
 
 VersionInfo_t VerInfo;
-char user_local_key[] = "test";
+char user_local_key[] = "password";
 const char VersionInfoName[] = "version.info";
 const char AuthFileName[] = "license.lic";
 
