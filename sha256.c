@@ -104,12 +104,13 @@ void sha256_final(SHA256_CTX* ctx, uint8_t* hash) {
 // len2: length of key2
 // @output
 // output: pointer to sha256, length is 32
-void sha256_calculate(uint8_t *key1, uint32_t len1, uint8_t *key2, uint32_t len2, uint8_t *output)
+void sha256_calculate(uint8_t *key1, uint32_t len1, uint8_t *key2, uint32_t len2, uint8_t *key3, uint32_t len3, uint8_t *output)
 {
     SHA256_CTX ctx;
     
     sha256_init(&ctx);
     sha256_update(&ctx, (uint8_t *)key1, len1);
     sha256_update(&ctx, (uint8_t *)key2, len2);
+    sha256_update(&ctx, (uint8_t *)key3, len3);
     sha256_final(&ctx, output);
 }
